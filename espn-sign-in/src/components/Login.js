@@ -1,42 +1,34 @@
 //Login.js
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { Paper, Avatar, TextField, Checkbox, Button, Typography, Link } from "@mui/material";
-import LockIcon from "@mui/icons-material/Lock";
-import FormControlLabel from "@mui/material/FormControlLabel";
+import { Paper, TextField, Button, Typography, Link, } from "@mui/material";
 const Login=()=> {
     const paperStyle={
-        padding: "20px",
+        padding: "30px",
         height: "70vh",
         width: 280,
         margin: "20px auto"
     }
-    const avatarStyle={
-        backgroundColor:"green"
-    }
     const btnstyle={
-        margin:"8px 0"
+        margin:"10px 0",
+        borderRadius:"100px"
     }
-    const textfield={
-        margin:"10px"
+    const textfield2={
+        margin:"20px"
     }
     return(
+        
          <Grid>
             <Paper elevation={10} style={paperStyle}>
+                <img src={require("/workspace/Espn-Sign-in/espn-sign-in/src/components/Images/ESPNGREYLOGO.png")} alt="name" width="100px"> </img> 
                 <Grid align="center">
-                <Avatar style={avatarStyle}><LockIcon></LockIcon></Avatar>
-                <h2>Sign in</h2>
+
                 </Grid>
-        <TextField label="Username" placeholder="Enter Username" fullWidth required></TextField>
-        <TextField label="Password" placeholder="Enter Password" type="password" fullWidth required></TextField>
-        <FormControlLabel
-            control={
-                <Checkbox
-                    name="Checked"
-                    color="primary"
-            />}
-            label="Remember me"
-            />
+                <Typography>‎‎‎‎‎‎‎‎‎‎</Typography>
+        <TextField label="Username or email address" placeholder="Enter Username" fullWidth required></TextField>
+        <Typography> ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎</Typography>
+        <TextField label="Password (case sensitive)" placeholder="Enter Password" type="password" fullWidth required></TextField>
+    
             <Button
                 type="Submit"
                 color="primary"
@@ -46,16 +38,23 @@ const Login=()=> {
                 >
                     Sign in
             </Button>
-            <Typography style={textfield}>
+            <Typography style={textfield2}>
                     <Link href="#">
-                        Forgot Password?
+                        Need help logging in?
                     </Link>
             </Typography>
-            <Typography style={textfield}>
-                    <Link href="#">
-                        Don't have an account? Sign Up
-                    </Link>
+            <Typography style={btnstyle}>
+                Facebook Login is no longer available. For help logging in please use the link above. 
             </Typography>
+            <Button 
+                type="Submit"
+                color="primary"
+                variant="outlined"
+                style={btnstyle}
+                fullWidth
+                >
+                    Sign up
+            </Button>
         </Paper>
         </Grid>
     )
